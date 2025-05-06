@@ -1,0 +1,11 @@
+# Сборка образа
+docker build -t danila115/web_app_python:latest .
+
+# Вход в Docker Hub
+docker login
+
+# Загрузка образа в реестр
+docker push danila115/web_app_python:latest
+
+# Запуск контейнера
+docker run -d -p 8000:8000 -e AUTHOR="Danila" danila115/web_app_python
